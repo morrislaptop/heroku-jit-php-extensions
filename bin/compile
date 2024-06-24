@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat $1/composer.json | jq '.require."ext-mongodb" = "*"' > $1/composer.json
