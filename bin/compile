@@ -1,3 +1,4 @@
 #!/bin/bash
 
-cat $1/composer.json | jq '.require."ext-mongodb" = "*"' > $1/composer.json
+# cat $1/composer.json | jq '.require."ext-mongodb" = "*"' > $1/composer.json
+echo $(cat $/1composer.json | jq '.require."ext-mongodb" = "*"') > $1/composer.json
