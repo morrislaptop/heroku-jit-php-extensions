@@ -3,3 +3,4 @@
 # cat $1/composer.json | jq '.require."ext-mongodb" = "*"' > $1/composer.json
 # echo $(cat $/1composer.json | jq '.require."ext-mongodb" = "*"') > $1/composer.json
 jq '.require."ext-mongodb" = "*"' $1/composer.json > $1/composer2.json && mv $1/composer2.json $1/composer.json
+jq '.scripts.compile = "@composer require mongodb/mongodb"' $1/composer.json > $1/composer2.json && mv $1/composer2.json $1/composer.json
